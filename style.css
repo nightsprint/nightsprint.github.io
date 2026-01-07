@@ -1,0 +1,261 @@
+      /* ===== BODY & ADS ===== */
+        body {
+            margin: 0;
+            background: #000;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .ads-space {
+            width: 100%;
+            min-height: 90px;
+        }
+
+        /* ===== GAME CSS ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: system-ui;
+        }
+
+        html,
+        body {
+            width: 100%;
+            min-height: 100%;
+            overflow-x: hidden;
+        }
+
+        #game-container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            background: #000;
+        }
+
+
+        /* MOON */
+        #moon {
+            position: absolute;
+            top: 25vh;
+            right: 6vw;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: radial-gradient(circle at 30% 30%, #fff, #c7d2fe 70%);
+            box-shadow: 0 0 50px #fff, 0 0 80px #22d3ee;
+            z-index: 1;
+        }
+
+        /* STARS */
+        .star {
+            position: absolute;
+            z-index: 1;
+            opacity: 0.6;
+            border-radius: 50%;
+        }
+
+        .star.white {
+            background: #fff;
+        }
+
+        .star.blue {
+            background: #3b82f6;
+        }
+
+        .star.pink {
+            background: #fb7185;
+        }
+
+        /* PLAYER */
+        #player {
+            position: absolute;
+            left: 12vw;
+            bottom: 104px;
+            width: 36px;
+            height: 36px;
+            background: linear-gradient(135deg, #22d3ee, #e0f2fe);
+            border-radius: 8px;
+            box-shadow: 0 0 12px #22d3ee;
+            z-index: 4;
+        }
+
+        /* GROUND */
+        #ground {
+            position: absolute;
+            bottom: 100px;
+            width: 100%;
+            height: 7px;
+            background: linear-gradient(135deg, skyblue, rgb(107, 107, 255));
+            box-shadow: 0 0 15px #58def0, 0 0 25px #3b38f8;
+            z-index: 3;
+        }
+
+        #ground-below {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 104px;
+            background: #010525;
+            box-shadow: 0 -5px 40px #000 inset, 0 -5px 80px #000 inset;
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        /* OBSTACLES */
+        .obs {
+            position: absolute;
+            bottom: 104px;
+            border-radius: 6px;
+            z-index: 4;
+        }
+
+        .obs.circle {
+            border-radius: 50%;
+        }
+
+        .obs.triangle {
+            width: 0 !important;
+            height: 0 !important;
+            background: none !important;
+            border-left: 18px solid transparent;
+            border-right: 18px solid transparent;
+            border-bottom: 36px solid;
+        }
+
+        /* COINS */
+        .coin {
+            position: absolute;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background: radial-gradient(circle, #fff, gold 60%);
+            box-shadow: 0 0 12px gold, 0 0 24px orange;
+            z-index: 4;
+        }
+
+        /* HUD */
+        #hud {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            z-index: 20;
+        }
+
+        /* CONTROLS */
+        #controls-outside {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            z-index: 50;
+        }
+
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 30px;
+            background: linear-gradient(135deg, #22d3ee, #38bdf8);
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: 0 0 15px #22d3ee;
+        }
+
+        input[type=range] {
+            width: 100px;
+        }
+
+        /* OVERLAYS */
+        .overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            text-align: center;
+            z-index: 100;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .shop-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 250px;
+            padding: 10px 20px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, #1e1e2f, #2e2e4f);
+            box-shadow: 0 0 10px #22d3ee;
+            color: white;
+            font-weight: bold;
+        }
+
+        .shop-item button {
+            padding: 5px 15px;
+            font-size: 14px;
+            border-radius: 8px;
+        }
+
+        /* ===== SHOP (Smaller) ===== */
+        #shop {
+            width: 300px;
+            /* smaller width */
+            max-height: 400px;
+            /* limit height */
+            overflow-y: auto;
+            /* scroll if too many items */
+            padding: 20px;
+            gap: 10px;
+        }
+
+        .shop-item {
+            width: 100%;
+            /* fit to shop width */
+            padding: 8px 15px;
+            /* smaller padding */
+            font-size: 14px;
+            /* slightly smaller text */
+        }
+
+        .shop-item button {
+            padding: 4px 10px;
+            /* smaller buttons */
+            font-size: 12px;
+        }
+
+        #game-container:fullscreen {
+            width: 100vw;
+            height: 100vh;
+        }
+
+        #game-container {
+            min-height: 100vh;
+        }
+
+        /* 📱 MOBILE FIX: coins hide issue */
+        @media (max-width: 768px) {
+            #controls-outside {
+                top: auto;
+                bottom: 10px;
+                right: 10px;
+                z-index: 50;
+            }
+        }
+
+        header {
+            width: 100%;
+            background: #000;
+            position: relative;
+            z-index: 10;
+        }

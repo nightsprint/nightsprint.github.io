@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- ✅ Mobile & Safe Area -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+    <!-- ✅ Page Title -->
+    <title>Night Sprint Game – Free Neon Runner HTML5 Game Online</title>
+
+    <!-- ✅ Meta Description -->
+    <meta name="description"
+        content="Night Sprint Game is a free HTML5 neon runner game. Play this endless runner online on mobile and desktop with glowing obstacles and coins.">
+
+    <!-- ✅ Robots -->
+    <meta name="robots" content="index, follow">
+
+    <!-- ✅ Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="favicon.ico">
+
+    <!-- ✅ Optional: Theme color (mobile address bar) -->
+    <meta name="theme-color" content="#000000">
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+
+<body>
+    <header style="background:#000; position:relative; z-index:10;">
+
+        <div style="text-align:center; padding:15px 10px; color:#e5e7eb; min-height:120px;">
+            <h1>Night Sprint Game – Free Neon Runner Online</h1>
+            <p>
+                Night Sprint is a free browser-based endless runner game.
+                Use keyboard or touch controls to play instantly.
+            </p>
+        </div>
+
+        <nav style="background:#000; color:#e5e7eb; padding:10px; text-align:center;">
+            <a href="blog.html" target="_blank" style="margin:0 10px;color:#38bdf8;">Blog</a>
+            <a href="index.html" style="margin:0 10px;color:#38bdf8;">Home</a>
+            <a href="about.html" target="_blank" style="margin:0 10px;color:#38bdf8;">About</a>
+            <a href="privacy-policy.html" target="_blank" style="margin:0 10px;color:#38bdf8;">Privacy</a>
+            <a href="contact.html" target="_blank" style="margin:0 10px;color:#38bdf8;">Contact</a>
+        </nav>
+
+    </header>
+
+    <!-- TOP ADS -->
+    <!-- <div class="ads-space"></div> -->
+
+    <main>
+        <section style="background:#000;color:#e5e7eb;padding:15px;">
+            <h2>Play Night Sprint Online</h2>
+            <p>A free HTML5 neon runner game playable instantly on mobile and desktop.</p>
+        </section>
+
+        <!-- GAME CONTAINER -->
+        <div id="game-container">
+            <!-- CONTROLS -->
+            <div id="controls-outside">
+                🔊 <input type="range" id="volume" min="0" max="1" step="0.01" value="0.7">
+                <button id="muteBtn" aria-label="Mute or unmute sound">🔊</button>
+                <button id="fullscreenBtn" aria-label="Toggle fullscreen mode">⛶</button>
+                <button id="pauseBtn" aria-label="Pause the game">⏸</button>
+                <button id="shopBtn" aria-label="Open shop">🛒 SHOP</button>
+            </div>
+
+            <div id="moon"></div>
+            <div id="player"></div>
+            <div id="ground"></div>
+            <div id="ground-below"></div>
+            <div id="hud">Score: 0 | Coins: 0</div>
+
+            <div class="overlay" id="start">
+                <h2>NIGHT SPRINT</h2>
+                <button id="startBtn">START</button>
+            </div>
+
+            <div class="overlay" id="over" style="display:none">
+                <h2>GAME OVER</h2>
+                <button onclick="restartGame()">RESTART</button>
+
+            </div>
+
+            <div class="overlay" id="pause" style="display:none">
+                <h2>PAUSED</h2>
+                <button onclick="resumeGame()">RESUME</button>
+            </div>
+            <div class="overlay" id="shop" style="display:none">
+                <h2>SHOP</h2>
+                <div id="shop-items" style="display:flex; flex-direction:column; gap:15px; align-items:center;"></div>
+                <button onclick="closeShop()">CLOSE</button>
+            </div>
+
+
+        </div>
+
+        <!-- BOTTOM ADS -->
+        <!-- <div class="ads-space"></div> -->
+
+
+        <section style="background:#000; color:#e5e7eb; padding:40px 20px; font-family:system-ui; margin-top:40px;">
+
+            <div style="max-width:900px; margin:auto;">
+
+                <h2>About Night Sprint</h2>
+                <p>Night Sprint is a browser-based endless runner game created for players who want quick and engaging
+                    gameplay without downloads or installations. The game runs directly in modern web browsers and
+                    offers
+                    instant access on both desktop and mobile devices. Its simple design and fast loading time make it
+                    ideal
+                    for casual gaming sessions, short breaks, and on-the-go entertainment.
+
+                    The neon night theme gives Night Sprint a unique and visually appealing style. Glowing obstacles,
+                    smooth
+                    animations, and a clean interface help create an immersive experience while keeping the focus on
+                    gameplay. Each run feels fresh as the endless runner format challenges players to survive longer and
+                    improve their timing and reflexes with every attempt.
+
+                    Gameplay in Night Sprint is easy to learn but challenging to master. Players control the character
+                    using
+                    simple jump controls to avoid obstacles and collect coins. As the score increases, the game
+                    gradually
+                    becomes faster, adding more intensity and excitement. This balance ensures that beginners can enjoy
+                    the
+                    game while experienced players continue to face new challenges.
+
+                    Night Sprint is fully optimized for both keyboard and touch controls, making it suitable for
+                    desktops,
+                    tablets, and smartphones. The game is built using HTML5, CSS, and JavaScript, ensuring smooth
+                    performance without requiring any plugins or additional software. It does not include gambling,
+                    betting,
+                    or real-money mechanics and is safe for players of all age groups.
+
+                    To protect user privacy, Night Sprint does not require account registration or personal information.
+                    Game progress such as collected coins and unlocked skins is stored locally in the user’s browser.
+                    This
+                    allows players to enjoy the game freely while maintaining a safe and privacy-friendly environment.
+
+                    If you are looking for a free endless runner game with clean visuals, responsive controls, and
+                    increasing difficulty, Night Sprint offers an enjoyable and accessible experience directly in your
+                    browser.</p>
+                <p>
+                    Night Sprint is a fast-paced neon runner game designed for players who enjoy
+                    quick reflex challenges and endless gameplay. The objective is simple:
+                    survive as long as possible while dodging obstacles and collecting coins.
+                    The game is built using pure HTML5, CSS, and JavaScript and runs directly
+                    in modern web browsers without any downloads.
+                </p>
+                <h2>Night Sprint Game – How to Play</h2>
+                <ul>
+                    <li>Press the Space key or tap the screen to jump</li>
+                    <li>Avoid neon obstacles on the ground</li>
+                    <li>Collect coins to unlock new player skins</li>
+                    <li>Try to achieve the highest score possible</li>
+                </ul>
+
+                <h2>Features of Night Sprint Neon Runner Game</h2>
+                <ul>
+                    <li>Endless runner gameplay</li>
+                    <li>Neon night theme and smooth animations</li>
+                    <li>Coin and upgrade system</li>
+                    <li>Playable on mobile and desktop devices</li>
+                    <li>No registration required</li>
+                </ul>
+
+                <h2>Why Night Sprint Is a Free HTML5 Runner Game</h2>
+                <p>Yes. Night Sprint does not include gambling, betting, or real-money mechanics.
+                    The game is suitable for all age groups and does not require any personal data to play.</p>
+
+
+                <h2>Frequently Asked Questions</h2>
+                <p><strong>Is Night Sprint free?</strong><br>Yes, the game is completely free to play.</p>
+                <p><strong>Do I need to install anything?</strong><br>No installation is required.</p>
+                <p><strong>Does this game work on mobile?</strong><br>Yes, it is fully mobile-friendly.</p>
+
+            </div>
+        </section>
+        <!-- Additional Content Section 1 -->
+        <section style="background:#000;color:#e5e7eb;padding:30px 20px; max-width:900px; margin:auto;">
+            <h2>Night Sprint High Score Tips</h2>
+            <p>To achieve a high score in Night Sprint, be careful to observe the pattern of obstacles.
+
+                Time every jump and slide perfectly. Collecting coins is important as they help unlock upgrades.
+
+                The game gets progressively faster, so patience and focus are crucial.</p>
+        </section>
+
+        <!-- Ad Placement 1 -->
+        <div class="ads-space" style="text-align:center; margin:20px 0;">
+            <!-- Yahan Google AdSense code add karein -->
+        </div>
+
+        <!-- Additional Content Section 2 -->
+        <section style="background:#111;color:#e5e7eb;padding:30px 20px; max-width:900px; margin:auto;">
+            <h2>Common Mistakes to Avoid</h2>
+            <ul>
+                <li>Ignoring obstacles – always be alert</li>
+                <li>Making unnecessary risky moves for science</li>
+                <li>Ignoring shop upgrades – they make gameplay easier</li>
+                <li>Not reading the screen or game instructions carefully</li>
+            </ul>
+        </section>
+
+        <!-- Additional Content Section 3 -->
+        <section style="background:#000;color:#e5e7eb;padding:30px 20px; max-width:900px; margin:auto;">
+            <h2>Night Sprint Shop & Upgrades Guide</h2>
+            <p>Unlocking upgrades and skins in the game's shop makes gameplay more enjoyable.
+                Invest coins in the most useful upgrades as you collect them.
+                Check the description of each item in the shop and create a strategic upgrade plan.
+                Following these tips will improve both your gameplay and score.</p>
+        </section>
+
+        <!-- Ad Placement 2 -->
+        <div class="ads-space" style="text-align:center; margin:20px 0;">
+            <!-- Yahan Google AdSense code add karein -->
+        </div>
+
+    </main>
+    <footer style="background:#000;color:#9ca3af;text-align:center;padding:20px;">
+        <a href="about.html" target="_blank">About</a> |
+        <a href="privacy-policy.html" target="_blank">Privacy Policy</a> |
+        <a href="terms.html" target="_blank">Terms</a> |
+        <a href="contact.html" target="_blank">Contact</a>
+        <br>
+        © <span id="year"></span> Night Sprint. All rights reserved.
+        <br>
+        This site uses cookies for basic functionality and analytics.
+    </footer>
+
+  <script src="game.js"></script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is Night Sprint Game?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Night Sprint Game is a free HTML5 neon runner game playable online on mobile and desktop browsers."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Night Sprint Game free to play?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, Night Sprint Game is completely free and does not require downloads or registration."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I play Night Sprint Game on mobile?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, Night Sprint Game works smoothly on mobile phones, tablets, and desktop browsers."
+      }
+    }
+  ]
+}
+</script>
+
+</body>
+
+</html>
